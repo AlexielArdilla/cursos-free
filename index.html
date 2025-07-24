@@ -35,7 +35,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-fill-color: transparent;
+            /*text-fill-color: transparent;*/
         }
 
         .nav-link.active {
@@ -69,7 +69,10 @@
                 <a href="#html-css" class="nav-link text-gray-300 hover:text-amber-400 transition-colors">HTML & CSS</a>
                 <a href="#javascript"
                     class="nav-link text-gray-300 hover:text-amber-400 transition-colors">JavaScript</a>
-                <a href="#ethical_hacking" class="nav-link text-gray-300 hover:text-amber-400 transition-colors">E. Hacking</a>
+                <a href="#ethical_hacking" class="nav-link text-gray-300 hover:text-amber-400 transition-colors">E.
+                    Hacking</a>
+                <a href="#libros" class="nav-link text-gray-300 hover:text-amber-400 transition-colors">Libros</a>
+
             </nav>
             <button id="mobile-menu-button" class="md:hidden text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
@@ -130,13 +133,14 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Course Card 1: Python -->
                     <div id="python" class="course-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-                        <img src="imagen_de_fondo/python_image.jpg"
-                            alt="Carátula Curso Python" class="w-full h-auto object-cover">
+                        <img src="imagen_de_fondo/python_image.jpg" alt="Carátula Curso Python"
+                            class="w-full h-auto object-cover">
                         <div class="p-6">
                             <h4 class="font-bold text-white text-xl">Python para Principiantes</h4>
                             <p class="text-sm text-gray-400 mt-1">Aprende los fundamentos de la programación con Python.
                             </p>
-                            <a href="pagina_videos_python.html" class="block mt-4 text-amber-400 hover:text-amber-500 font-bold">Ver Curso
+                            <a href="pagina_videos_python.html"
+                                class="block mt-4 text-amber-400 hover:text-amber-500 font-bold">Ver Curso
                                 &rarr;</a>
                         </div>
                     </div>
@@ -153,8 +157,8 @@
                     </div>
                     <!-- Course Card 3: HTML & CSS -->
                     <div id="html-css" class="course-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-                        <img src="imagen_de_fondo/html_css_image.jpg"
-                            alt="Carátula Curso HTML CSS" class="w-full h-auto object-cover">
+                        <img src="imagen_de_fondo/html_css_image.jpg" alt="Carátula Curso HTML CSS"
+                            class="w-full h-auto object-cover">
                         <div class="p-6">
                             <h4 class="font-bold text-white text-xl">HTML & CSS desde Cero</h4>
                             <p class="text-sm text-gray-400 mt-1">Crea sitios web impresionantes y responsivos.</p>
@@ -164,8 +168,8 @@
                     </div>
                     <!-- Course Card 4: JavaScript -->
                     <div id="javascript" class="course-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-                        <img src="imagen_de_fondo/JS_image.jpg"
-                            alt="Carátula Curso JavaScript" class="w-full h-auto object-cover">
+                        <img src="imagen_de_fondo/JS_image.jpg" alt="Carátula Curso JavaScript"
+                            class="w-full h-auto object-cover">
                         <div class="p-6">
                             <h4 class="font-bold text-white text-xl">JavaScript Moderno</h4>
                             <p class="text-sm text-gray-400 mt-1">Domina el lenguaje de la web para interactividad.</p>
@@ -175,19 +179,20 @@
                     </div>
                     <!-- Course Card 5: E. Hacking -->
                     <div id="ethical_hacking" class="course-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-                        <img src="imagen_de_fondo/ethical_hacking_image.jpg"
-                            alt="Carátula Curso ethical hacking" class="w-full h-auto object-cover">
+                        <img src="imagen_de_fondo/ethical_hacking_image.jpg" alt="Carátula Curso ethical hacking"
+                            class="w-full h-auto object-cover">
                         <div class="p-6">
                             <h4 class="font-bold text-white text-xl">Ethical Hacking con Kali</h4>
                             <p class="text-sm text-gray-400 mt-1">Aprende Hacking ofensivo con Kali.</p>
-                            <a href="pagina_videos_ethical_hacking.html" class="block mt-4 text-amber-400 hover:text-amber-500 font-bold">Ver Curso
+                            <a href="pagina_videos_ethical_hacking.html"
+                                class="block mt-4 text-amber-400 hover:text-amber-500 font-bold">Ver Curso
                                 &rarr;</a>
                         </div>
                     </div>
                     <!-- Course Card 6: Placeholder for more courses -->
                     <div class="course-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-                        <img src="imagen_de_fondo/software-developer-6521720_1280.jpg"
-                            alt="Carátula Más Cursos" class="w-full h-auto object-cover">
+                        <img src="imagen_de_fondo/software-developer-6521720_1280.jpg" alt="Carátula Más Cursos"
+                            class="w-full h-auto object-cover">
                         <div class="p-6">
                             <h4 class="font-bold text-white text-xl">¡Y mucho más!</h4>
                             <p class="text-sm text-gray-400 mt-1">Nuevos cursos se añaden constantemente.</p>
@@ -206,12 +211,14 @@
         </section>
 
         <!-- Author / Books Section -->
-        <section id="author2" class="py-20 md:py-32 bg-gray-900">
+        <section id="libros" class="py-20 md:py-32 bg-gray-900">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-white">Una Biblioteca a tu Alcance</h2>
                     <div class="w-24 h-1 bg-amber-500 mx-auto mt-4 mb-8"></div>
-                    <p class="text-lg text-gray-400 max-w-3xl mx-auto">Desde un manual de Linux hasta ethical hacking y Python, pasando por Metasploit... Y lo que vendrá!!!(Click en las imágenes para descargar los libros)</p>
+                    <p class="text-lg text-gray-400 max-w-3xl mx-auto">Desde un manual de Linux hasta ethical hacking y
+                        Python, pasando por Metasploit... Y lo que vendrá!!!(Click en las imágenes para descargar los
+                        libros)</p>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -227,9 +234,9 @@
                     </div>
                     <!-- Book Card 2 -->
                     <div class="book-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-                        <a href="PDFs/02 Guía Maestra de Python Con Portada A G V.pdf"
-                            target="_blank"><img src="images/02 guia_de_python.jpg"
-                                alt="Portada del Libro Textos herméticos" class="w-full h-auto object-cover"></a>
+                        <a href="PDFs/02 Guía Maestra de Python Con Portada A G V.pdf" target="_blank"><img
+                                src="images/02 guia_de_python.jpg" alt="Portada del Libro Textos herméticos"
+                                class="w-full h-auto object-cover"></a>
                         <div class="p-6">
                             <h4 class="font-bold text-white text-lg">Guía maestra de Python</h4>
                             <p class="text-sm text-gray-400 mt-1">Programación</p>
@@ -249,8 +256,8 @@
                     <!-- Book Card 4 -->
                     <div class="book-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
                         <a href="PDFs/04 Metasploit Manual_Alejandro G Vera.pdf" target="_blank"><img
-                                src="images/04 metasploit_alexx.jpg"
-                                alt="Portada del libro El arte de la palabra" class="w-full h-auto object-cover"></a>
+                                src="images/04 metasploit_alexx.jpg" alt="Portada del libro El arte de la palabra"
+                                class="w-full h-auto object-cover"></a>
                         <div class="p-6">
                             <h4 class="font-bold text-white text-lg">Metasploit</h4>
                             <p class="text-sm text-gray-400 mt-1">Full hacking con Metasploit</p>

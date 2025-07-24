@@ -126,6 +126,4 @@ Reemplazá en tu array:
 thumbnail: 'https://img.youtube.com/vi/dQw4w9WgXcQ/mqdefault.jpg'
 ```
 
----
-
-Si querés, decime los links de tus videos y te doy todo armado con títulos, thumbnails y descripciones 😉.
+### Alí el gran Alí
