@@ -38,4 +38,5 @@ video 1: https://youtu.be/97-l__EQn2k 6:57 Hola mundo con JS
 video 2: https://youtu.be/FhGmbL_SjGc 4:27 Hola mundo con prompt
 video 3: https://youtu.be/wkO71O74Ld8 8:19 variables
 video 4: https://youtu.be/wyg9jQd7xZc 4:47 Operadores en JS
-video 5: 
+video 5: https://youtu.be/wWC7CLI1__g 4:07 Template Strings
+
