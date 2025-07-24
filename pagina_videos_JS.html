@@ -154,13 +154,17 @@
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index2.html" class="text-xl font-bold text-white">Freelance Applications</a>
             <nav class="hidden md:flex space-x-8 items-center">
-              <!-- Navigation links for courses -->
-                <a href="index2.html#python" class="nav-link text-gray-300 hover:text-amber-400 transition-colors">Python</a>
-                <a href="index2.html#java" class="nav-link text-gray-300 hover:text-amber-400 transition-colors">Java</a>
-                <a href="index2.html#html-css" class="nav-link text-gray-300 hover:text-amber-400 transition-colors">HTML & CSS</a>
+                <!-- Navigation links for courses -->
+                <a href="index2.html#python"
+                    class="nav-link text-gray-300 hover:text-amber-400 transition-colors">Python</a>
+                <a href="index2.html#java"
+                    class="nav-link text-gray-300 hover:text-amber-400 transition-colors">Java</a>
+                <a href="index2.html#html-css"
+                    class="nav-link text-gray-300 hover:text-amber-400 transition-colors">HTML & CSS</a>
                 <a href="index2.html#javascript"
                     class="nav-link text-gray-300 hover:text-amber-400 transition-colors">JavaScript</a>
-                <a href="index2.html#ethical_hacking" class="nav-link text-gray-300 hover:text-amber-400 transition-colors">E. Hacking</a>
+                <a href="index2.html#ethical_hacking"
+                    class="nav-link text-gray-300 hover:text-amber-400 transition-colors">E. Hacking</a>
             </nav>
             <button id="mobile-menu-button" class="md:hidden text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
@@ -246,13 +250,43 @@
     <script>
         // Array de objetos de video con sus IDs, títulos, duraciones y descripciones
         const videosData = [
-            { id: 'ivdTnPl1ND0', title: '1. Introducción a la Programación JavaScript', duration: '9:15 min', thumbnail: 'https://img.youtube.com/vi/ivdTnPl1ND0/default.jpg', description: 'Este es un video completo de aprendizaje de programación JavaScript de Freecodecamp.' },
-            { id: 'VIDEO_ID_2', title: '2. Variables y Tipos de Datos', duration: '15 min', thumbnail: 'https://placehold.co/120x67/374151/FBBF24?text=Video+2', description: 'Explora los diferentes tipos de datos en Python y cómo declarar y usar variables de manera efectiva.' },
-            { id: 'VIDEO_ID_3', title: '3. Estructuras de Control (If/Else, Loops)', duration: '20 min', thumbnail: 'https://placehold.co/120x67/374151/FBBF24?text=Video+3', description: 'Aprende a controlar el flujo de tu programa con sentencias condicionales (if/else) y bucles (for, while).' },
-            { id: 'VIDEO_ID_4', title: '4. Funciones en Python', duration: '18 min', thumbnail: 'https://placehold.co/120x67/374151/FBBF24?text=Video+4', description: 'Descubre cómo crear y utilizar funciones para organizar tu código y hacerlo más reutilizable.' },
-            { id: 'VIDEO_ID_5', title: '5. Clases y Objetos (POO)', duration: '25 min', thumbnail: 'https://placehold.co/120x67/374151/FBBF24?text=Video+5', description: 'Una introducción a la Programación Orientada a Objetos (POO) en Python, explicando clases, objetos y sus principios básicos.' },
-            { id: 'VIDEO_ID_6', title: '6. Manejo de Errores y Excepciones', duration: '12 min', thumbnail: 'https://placehold.co/120x67/374151/FBBF24?text=Video+6', description: 'Aprende a manejar errores y excepciones en Python para hacer tus programas más robustos.' }
+            {
+                id: '97-l__EQn2k',
+                title: '1. Hola mundo con JavaScript',
+                duration: '6:57 min',
+                thumbnail: 'https://img.youtube.com/vi/97-l__EQn2k/mqdefault.jpg',
+                description: 'Tu primer programa con JavaScript: escribimos "Hola Mundo" y vemos cómo conectarlo con HTML.'
+            },
+            {
+                id: 'FhGmbL_SjGc',
+                title: '2. Hola mundo con prompt',
+                duration: '4:27 min',
+                thumbnail: 'https://img.youtube.com/vi/FhGmbL_SjGc/mqdefault.jpg',
+                description: 'Mostramos cómo usar `prompt()` en JavaScript para interactuar con el usuario a través de entradas de texto.'
+            },
+            {
+                id: 'wkO71O74Ld8',
+                title: '3. Variables en JavaScript',
+                duration: '8:19 min',
+                thumbnail: 'https://img.youtube.com/vi/wkO71O74Ld8/mqdefault.jpg',
+                description: 'Aprendé cómo declarar variables usando `let`, `const` y `var`, y cuál es la diferencia entre ellas.'
+            },
+            {
+                id: 'wyg9jQd7xZc',
+                title: '4. Operadores en JavaScript',
+                duration: '4:47 min',
+                thumbnail: 'https://img.youtube.com/vi/wyg9jQd7xZc/mqdefault.jpg',
+                description: 'Explicación de los operadores matemáticos, lógicos y de comparación en JavaScript con ejemplos prácticos.'
+            },
+            {
+                id: 'wWC7CLI1__g',
+                title: '5. Template Strings',
+                duration: '4:07 min',
+                thumbnail: 'https://img.youtube.com/vi/wWC7CLI1__g/mqdefault.jpg',
+                description: 'Descubrí cómo usar Template Strings para concatenar variables dentro de strings de forma elegante.'
+            }
         ];
+
 
         // Función para añadir un comentario (simulado, sin persistencia)
         document.getElementById('submit-comment').addEventListener('click', function () {

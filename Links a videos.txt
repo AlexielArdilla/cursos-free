@@ -18,3 +18,24 @@ video 02:https://www.youtube.com/watch?v=nk7ksSWmGzQ  3:29 Qué es un IDE y cuá
 video 03:https://www.youtube.com/watch?v=Rh9lbDrGeS8  1:56 Cómo instalar VSCode
 video 04:https://www.youtube.com/watch?v=EQ9bxSh2cHY  2:12 Cómo crear la carpeta para la primera lección
 video 05:https://www.youtube.com/watch?v=CKzaM8S_T8o  12:28 Sólo lo necesario de HTML y CSS
+
+Python:
+video 01:https://youtu.be/Gugh2b4Wuhk 15:11 Introducción
+video 02:https://youtu.be/gNDHP7X1ocI  5:12 Cómo instalar Python
+video 03:https://youtu.be/LejyxpTg3Sw  6:37 Cómo instalar VSCode
+video 04:https://youtu.be/DgFMwkPvKaQ  2:12 Extensiones VSCode Python
+video 05:https://youtu.be/G1jpm_he7MQ  6:02 Hola mundo en Python
+
+Java:
+video 1: https://youtu.be/rM4okH7GlJQ 11:57 Introducción
+video 2: https://youtu.be/JM8cwVtlqtw 4:33 Instalar JDK y Eclise IDE
+video 3: https://youtu.be/pdINEAqn-zY 3:45 Probando Hola mundo
+video 4: https://youtu.be/m0A5P67yltQ 8:05 Enteros
+video 5: https://youtu.be/lPD4bTLxDfg 7:43 Booleans
+
+JS:
+video 1: https://youtu.be/97-l__EQn2k 6:57 Hola mundo con JS
+video 2: https://youtu.be/FhGmbL_SjGc 4:27 Hola mundo con prompt
+video 3: https://youtu.be/wkO71O74Ld8 8:19 variables
+video 4: https://youtu.be/wyg9jQd7xZc 4:47 Operadores en JS
+video 5: 
