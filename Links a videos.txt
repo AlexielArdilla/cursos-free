@@ -11,3 +11,10 @@ E H. video 10: https://youtu.be/PDHkzPiUx8w
 E H. video 11: https://youtu.be/gIhCBO6mbQc
 E H. video 12: https://youtu.be/Vtk7eLtE-YU
 E H. video 13: https://youtu.be/2cSY5NY-xI4
+
+HTML y CSS:
+video 01:https://www.youtube.com/watch?v=qGODWuBopnQ  3:31 Introducción
+video 02:https://www.youtube.com/watch?v=nk7ksSWmGzQ  3:29 Qué es un IDE y cuál usar
+video 03:https://www.youtube.com/watch?v=Rh9lbDrGeS8  1:56 Cómo instalar VSCode
+video 04:https://www.youtube.com/watch?v=EQ9bxSh2cHY  2:12 Cómo crear la carpeta para la primera lección
+video 05:https://www.youtube.com/watch?v=CKzaM8S_T8o  12:28 Sólo lo necesario de HTML y CSS

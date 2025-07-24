@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cursos de Programación | Freelance Applications</title>
+    <title>Acceso | Freelance Applications</title>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -35,327 +35,145 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            /*text-fill-color: transparent;*/
         }
 
-        .nav-link.active {
-            color: #FBBF24;
-            /* amber-400 */
+        /* Estilos para el mensaje de notificación */
+        .message-box {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 15px 25px;
+            border-radius: 8px;
             font-weight: bold;
+            z-index: 1000;
+            display: none; /* Oculto por defecto */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            animation: fadeInOut 3s forwards;
         }
 
-        .course-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .message-box.success {
+            background-color: #10B981; /* green-500 */
+            color: #ECFDF5; /* green-50 */
         }
 
-        .course-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+        .message-box.error {
+            background-color: #EF4444; /* red-500 */
+            color: #FEF2F2; /* red-50 */
+        }
+
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+            10% { opacity: 1; transform: translateX(-50%) translateY(0); }
+            90% { opacity: 1; transform: translateX(-50%) translateY(0); }
+            100% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
         }
     </style>
 </head>
 
-<body class="antialiased">
+<body class="antialiased flex items-center justify-center min-h-screen bg-cover bg-center"
+    style="background-image: url('https://placehold.co/1920x1080/1a202c/e2e8f0?text=Tu+Imagen+de+Fondo+Aquí');">
+    <!-- Overlay for background image -->
+    <div class="absolute inset-0 bg-gray-900/80"></div>
 
-    <!-- Header & Navigation -->
-    <header id="header"
-        class="bg-gray-900/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-white">Freelance Applications</a>
-            <nav class="hidden md:flex space-x-8 items-center">
-                <!-- Navigation links for courses -->
-                <a href="#python" class="nav-link text-gray-300 hover:text-amber-400 transition-colors">Python</a>
-                <a href="#java" class="nav-link text-gray-300 hover:text-amber-400 transition-colors">Java</a>
-                <a href="#html-css" class="nav-link text-gray-300 hover:text-amber-400 transition-colors">HTML & CSS</a>
-                <a href="#javascript"
-                    class="nav-link text-gray-300 hover:text-amber-400 transition-colors">JavaScript</a>
-                <a href="#ethical_hacking" class="nav-link text-gray-300 hover:text-amber-400 transition-colors">E.
-                    Hacking</a>
-                <a href="#libros" class="nav-link text-gray-300 hover:text-amber-400 transition-colors">Libros</a>
+    <div class="relative z-10 bg-gray-800 p-8 rounded-lg shadow-xl max-w-md w-full mx-4">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-white mb-2">Bienvenido a <span class="text-gradient">Freelance Applications</span></h2>
+            <p class="text-gray-400">Inicia sesión o crea una cuenta para acceder a nuestros cursos.</p>
+        </div>
 
-            </nav>
-            <button id="mobile-menu-button" class="md:hidden text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        <!-- Message Box for notifications -->
+        <div id="message-box" class="message-box"></div>
+
+        <!-- Login Form -->
+        <form id="login-form" class="space-y-6">
+            <div>
+                <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Correo Electrónico</label>
+                <input type="email" id="email" name="email"
+                    class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-amber-500 bg-gray-700"
+                    placeholder="tu@ejemplo.com">
+            </div>
+            <div>
+                <label for="password" class="block text-gray-300 text-sm font-bold mb-2">Contraseña</label>
+                <input type="password" id="password" name="password"
+                    class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-amber-500 bg-gray-700"
+                    placeholder="********">
+            </div>
+            <button type="submit"
+                class="w-full bg-amber-500 text-gray-900 font-bold py-3 px-4 rounded-lg hover:bg-amber-600 transition-colors focus:outline-none focus:shadow-outline">
+                Iniciar Sesión
+            </button>
+        </form>
+
+        <div class="mt-6 text-center text-gray-400">
+            <p>¿No tienes cuenta? <a href="#" class="text-amber-400 hover:underline">Regístrate aquí</a></p>
+        </div>
+
+        <div class="relative flex items-center justify-center my-8">
+            <div class="absolute inset-0 flex items-center">
+                <div class="w-full border-t border-gray-700"></div>
+            </div>
+            <div class="relative bg-gray-800 px-4 text-sm text-gray-400">O</div>
+        </div>
+
+        <!-- Social Login Options -->
+        <div class="space-y-4">
+            <button
+                class="w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center focus:outline-none focus:shadow-outline">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M12.0003 12.7238C13.4388 12.7238 14.6063 12.2798 15.5028 11.3918L18.0593 13.9483C16.2978 15.7098 13.9998 16.6668 12.0003 16.6668C8.10935 16.6668 4.78935 14.0758 3.56735 10.4318L6.15585 8.4218C6.73635 10.1988 8.16335 11.4998 10.0003 12.1668L10.0003 12.1673C10.6673 12.4088 11.3338 12.5558 12.0003 12.7238Z" />
+                    <path
+                        d="M23.9998 12.0002C23.9998 11.3337 23.9063 10.6672 23.7703 10.0002H12.0003V14.0002H18.6673C18.4023 15.3332 17.5023 16.3332 16.3338 17.0002L18.9223 19.0002C20.6673 17.3332 21.8338 15.0002 22.5003 12.0002H23.9998Z" />
+                    <path
+                        d="M12.0003 7.33333C13.4388 7.33333 14.6063 7.77733 15.5028 8.66533L18.0593 6.10883C16.2978 4.34733 13.9998 3.33333 12.0003 3.33333C8.10935 3.33333 4.78935 5.92433 3.56735 9.56833L6.15585 11.5783C6.73635 9.80133 8.16335 8.50033 10.0003 7.83333L10.0003 7.83283C10.6673 7.59133 11.3338 7.44433 12.0003 7.33333Z" />
                 </svg>
+                Continuar con Google
+            </button>
+            <button
+                class="w-full bg-gray-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-gray-700 transition-colors focus:outline-none focus:shadow-outline">
+               <a href="index2.html"> Entrar como Invitado</a>
             </button>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden">
-            <a href="#python" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-800">Python</a>
-            <a href="#java" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-800">Java</a>
-            <a href="#html-css" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-800">HTML & CSS</a>
-            <a href="#javascript" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-800">JavaScript</a>
-            <a href="#ethical_hacking" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-800">E. Hacking</a>
-        </div>
-    </header>
-
-    <main>
-        <!-- Hero Section -->
-        <section id="hero" class="min-h-screen flex items-center bg-cover bg-center"
-            style="background-image: url(imagen_de_fondo/programacion_imagen_fondo.jpg);">
-            <div class="absolute inset-0 bg-gray-900/80"></div>
-            <div class="container mx-auto px-6 text-center relative z-10">
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-                    Domina el Arte de la Programación con <br>
-                    <span class="text-gradient">Nuestros Cursos Expertos</span>
-                </h1>
-                <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-                    Desde los fundamentos hasta las tecnologías más avanzadas, te guiamos en tu camino para convertirte
-                    en un desarrollador profesional.
-                </p>
-                <div class="mt-8 flex justify-center gap-4">
-                    <a href="#courses-overview"
-                        class="bg-amber-500 text-gray-900 font-bold py-3 px-8 rounded-lg hover:bg-amber-600 transition-colors text-lg">
-                        Explorar Cursos
-                    </a>
-                    <a href="#contact"
-                        class="bg-transparent border-2 border-amber-500 text-amber-500 font-bold py-3 px-8 rounded-lg hover:bg-amber-500 hover:text-gray-900 transition-colors text-lg">
-                        ¿Por dónde empezar?
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Courses Overview Section -->
-        <section id="courses-overview" class="py-20 md:py-32 bg-gray-900">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white">Nuestros Cursos Destacados</h2>
-                    <div class="w-24 h-1 bg-amber-500 mx-auto mt-4 mb-8"></div>
-                    <p class="text-lg text-gray-400 max-w-3xl mx-auto">
-                        Inicia tu viaje en el mundo de la programación o lleva tus habilidades al siguiente nivel con
-                        nuestra amplia oferta de cursos.
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Course Card 1: Python -->
-                    <div id="python" class="course-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-                        <img src="imagen_de_fondo/python_image.jpg" alt="Carátula Curso Python"
-                            class="w-full h-auto object-cover">
-                        <div class="p-6">
-                            <h4 class="font-bold text-white text-xl">Python para Principiantes</h4>
-                            <p class="text-sm text-gray-400 mt-1">Aprende los fundamentos de la programación con Python.
-                            </p>
-                            <a href="pagina_videos_python.html"
-                                class="block mt-4 text-amber-400 hover:text-amber-500 font-bold">Ver Curso
-                                &rarr;</a>
-                        </div>
-                    </div>
-                    <!-- Course Card 2: Java -->
-                    <div id="java" class="course-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-                        <img src="imagen_de_fondo/java_image.jpg" alt="Carátula Curso Java"
-                            class="w-full h-auto object-cover">
-                        <div class="p-6">
-                            <h4 class="font-bold text-white text-xl">Desarrollo en Java</h4>
-                            <p class="text-sm text-gray-400 mt-1">Construye aplicaciones robustas con Java.</p>
-                            <a href="#" class="block mt-4 text-amber-400 hover:text-amber-500 font-bold">Ver Curso
-                                &rarr;</a>
-                        </div>
-                    </div>
-                    <!-- Course Card 3: HTML & CSS -->
-                    <div id="html-css" class="course-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-                        <img src="imagen_de_fondo/html_css_image.jpg" alt="Carátula Curso HTML CSS"
-                            class="w-full h-auto object-cover">
-                        <div class="p-6">
-                            <h4 class="font-bold text-white text-xl">HTML & CSS desde Cero</h4>
-                            <p class="text-sm text-gray-400 mt-1">Crea sitios web impresionantes y responsivos.</p>
-                            <a href="#" class="block mt-4 text-amber-400 hover:text-amber-500 font-bold">Ver Curso
-                                &rarr;</a>
-                        </div>
-                    </div>
-                    <!-- Course Card 4: JavaScript -->
-                    <div id="javascript" class="course-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-                        <img src="imagen_de_fondo/JS_image.jpg" alt="Carátula Curso JavaScript"
-                            class="w-full h-auto object-cover">
-                        <div class="p-6">
-                            <h4 class="font-bold text-white text-xl">JavaScript Moderno</h4>
-                            <p class="text-sm text-gray-400 mt-1">Domina el lenguaje de la web para interactividad.</p>
-                            <a href="#" class="block mt-4 text-amber-400 hover:text-amber-500 font-bold">Ver Curso
-                                &rarr;</a>
-                        </div>
-                    </div>
-                    <!-- Course Card 5: E. Hacking -->
-                    <div id="ethical_hacking" class="course-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-                        <img src="imagen_de_fondo/ethical_hacking_image.jpg" alt="Carátula Curso ethical hacking"
-                            class="w-full h-auto object-cover">
-                        <div class="p-6">
-                            <h4 class="font-bold text-white text-xl">Ethical Hacking con Kali</h4>
-                            <p class="text-sm text-gray-400 mt-1">Aprende Hacking ofensivo con Kali.</p>
-                            <a href="pagina_videos_ethical_hacking.html"
-                                class="block mt-4 text-amber-400 hover:text-amber-500 font-bold">Ver Curso
-                                &rarr;</a>
-                        </div>
-                    </div>
-                    <!-- Course Card 6: Placeholder for more courses -->
-                    <div class="course-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-                        <img src="imagen_de_fondo/software-developer-6521720_1280.jpg" alt="Carátula Más Cursos"
-                            class="w-full h-auto object-cover">
-                        <div class="p-6">
-                            <h4 class="font-bold text-white text-xl">¡Y mucho más!</h4>
-                            <p class="text-sm text-gray-400 mt-1">Nuevos cursos se añaden constantemente.</p>
-                            <a href="#" class="block mt-4 text-amber-400 hover:text-amber-500 font-bold">Explorar
-                                &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-12">
-                    <a href="https://www.udemy.com/user/alejandro-gonzalo-vera/"
-                        class="bg-amber-500 text-gray-900 font-bold py-3 px-8 rounded-lg hover:bg-amber-600 transition-colors text-lg">
-                        Ver todos los cursos
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Author / Books Section -->
-        <section id="libros" class="py-20 md:py-32 bg-gray-900">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white">Una Biblioteca a tu Alcance</h2>
-                    <div class="w-24 h-1 bg-amber-500 mx-auto mt-4 mb-8"></div>
-                    <p class="text-lg text-gray-400 max-w-3xl mx-auto">Desde un manual de Linux hasta ethical hacking y
-                        Python, pasando por Metasploit... Y lo que vendrá!!!(Click en las imágenes para descargar los
-                        libros)</p>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Book Card 1 -->
-                    <div class="book-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-                        <a href="PDFs/01 Manual de Linux completo A G V.pdf" target="_blank"><img
-                                src="images/01_Manual_de_Linux_page-0001.jpg" alt="Portada del libro Manual de Linux"
-                                class="w-full h-auto object-cover"></a>
-                        <div class="p-6">
-                            <h4 class="font-bold text-white text-lg">Manual de Linux</h4>
-                            <p class="text-sm text-gray-400 mt-1">Sistemas operativos/manual</p>
-                        </div>
-                    </div>
-                    <!-- Book Card 2 -->
-                    <div class="book-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-                        <a href="PDFs/02 Guía Maestra de Python Con Portada A G V.pdf" target="_blank"><img
-                                src="images/02 guia_de_python.jpg" alt="Portada del Libro Textos herméticos"
-                                class="w-full h-auto object-cover"></a>
-                        <div class="p-6">
-                            <h4 class="font-bold text-white text-lg">Guía maestra de Python</h4>
-                            <p class="text-sm text-gray-400 mt-1">Programación</p>
-                        </div>
-                    </div>
-                    <!-- Book Card 3 -->
-                    <div class="book-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-                        <a href="PDFs/03 Guía integral Ethical hacking Kali A G V.pdf" target="_blank"><img
-                                src="images/03_Guía_integral_Ethical_hacking_page-0001.jpg"
-                                alt="Portada del libro Guía integral de Ethical hacking"
-                                class="w-full h-auto object-cover"></a>
-                        <div class="p-6">
-                            <h4 class="font-bold text-white text-lg">Guía integral de Ethical hacking</h4>
-                            <p class="text-sm text-gray-400 mt-1">IT/Ethical Hacking</p>
-                        </div>
-                    </div>
-                    <!-- Book Card 4 -->
-                    <div class="book-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-                        <a href="PDFs/04 Metasploit Manual_Alejandro G Vera.pdf" target="_blank"><img
-                                src="images/04 metasploit_alexx.jpg" alt="Portada del libro El arte de la palabra"
-                                class="w-full h-auto object-cover"></a>
-                        <div class="p-6">
-                            <h4 class="font-bold text-white text-lg">Metasploit</h4>
-                            <p class="text-sm text-gray-400 mt-1">Full hacking con Metasploit</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-12">
-                    <a href="https://www.amazon.co.uk/stores/Alejandro-Gonzalo-Vera/author/B00GI26T22/allbooks"
-                        target="_blank" rel="noopener noreferrer"
-                        class="bg-amber-500 text-gray-900 font-bold py-3 px-8 rounded-lg hover:bg-amber-600 transition-colors text-lg">
-                        Ver todos los títulos
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Call to Action / Contact Section -->
-        <section id="contact" class="py-20 md:py-32 bg-gray-800 text-center">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">¿Listo para empezar a programar?</h2>
-                <p class="text-lg text-gray-300 max-w-3xl mx-auto mb-8">
-                    Únete a nuestra comunidad de estudiantes y transforma tu futuro con habilidades de programación de
-                    alta demanda.
-                </p>
-                <a href="pagina_videos_python.html"
-                    class="bg-amber-500 text-gray-900 font-bold py-3 px-8 rounded-lg hover:bg-amber-600 transition-colors text-lg">
-                    ¡Empieza ya!
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900">
-        <div class="container mx-auto px-6 py-12">
-            <div class="text-center">
-                <h3 class="text-2xl font-bold text-white">Freelance Applications</h3>
-                <p class="text-gray-400 mt-2">Transformando futuros a través del código.</p>
-                <div class="flex justify-center space-x-6 mt-6">
-                    <!-- Placeholder for social media icons -->
-                    <!-- GitHub -->
-                    <a href="https://github.com/AlexielArdilla" target="_blank" rel="noopener noreferrer"
-                        class="text-gray-400 hover:text-white transition-colors">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </a>
-                    <!-- Amazon -->
-                    <a href="https://www.amazon.co.uk/stores/Alejandro-Gonzalo-Vera/author/B00GI26T22/allbooks"
-                        target="_blank" rel="noopener noreferrer"
-                        class="text-gray-400 hover:text-white transition-colors">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path
-                                d="M20.95,11.23a1,1,0,0,0-.45-0.34,1,1,0,0,0-.56-0.09,12.87,12.87,0,0,0-7.89,0,1,1,0,0,0-1,.43,10.6,10.6,0,0,0-2.43,6.84,9.3,9.3,0,0,0,.15,1.72,1,1,0,0,0,.63.78,1,1,0,0,0,.84,0,1,1,0,0,0,.52-0.77,7.2,7.2,0,0,1-.12-1.24,8.41,8.41,0,0,1,2-5.22,9.6,9.6,0,0,1,6.51-3.11Z" />
-                            <path
-                                d="M22.59,16.29a1,1,0,0,0-1.2-.51,7.34,7.34,0,0,1-4.86,1.7,7.31,7.31,0,0,1-4.87-1.7,1,1,0,0,0-1.2.51,1,1,0,0,0,.51,1.2A9.31,9.31,0,0,0,16.5,20a9.34,9.34,0,0,0,5.58-2.51,1,1,0,0,0,.51-1.2Z" />
-                        </svg>
-                    </a>
-                </div>
-                <p class="text-sm text-gray-500 mt-8">&copy; <span id="year"></span> Freelance Applications. Todos
-                    los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
+    </div>
 
     <script>
-        // --- Mobile Menu Toggle ---
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+        // Get the login form and message box elements
+        const loginForm = document.getElementById('login-form');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const messageBox = document.getElementById('message-box');
+
+        // Function to display messages
+        function showMessage(message, type) {
+            messageBox.textContent = message;
+            messageBox.className = `message-box ${type}`; // Add type class (success or error)
+            messageBox.style.display = 'block'; // Show the message box
+
+            // Hide the message after 3 seconds
+            setTimeout(() => {
+                messageBox.style.display = 'none';
+            }, 3000);
+        }
+
+        // Add event listener for form submission
+        loginForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent default form submission
+
+            const email = emailInput.value;
+            const password = passwordInput.value;
+
+            // Simple admin authentication for demonstration
+            if (email === 'admin@admin.com' && password === 'admin') {
+                showMessage('¡Inicio de sesión como administrador exitoso! Redirigiendo...', 'success');
+                // Redirect to index2.html after a short delay to show the message
+                setTimeout(() => {
+                    window.location.href = 'index2.html';
+                }, 1500); // 1.5 seconds delay
+            } else {
+                showMessage('Credenciales incorrectas. Intenta de nuevo.', 'error');
+            }
         });
-
-        // --- Active Nav Link on Scroll ---
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 100) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').includes(current)) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-        // --- Set current year in footer ---
-        document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
 
